@@ -10,12 +10,8 @@ var confirmLowercase;
 var UPPERCASE_CHAR_CODES = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var LOWERCASE_CHAR_CODES = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var NUMBER_CHAR_CODES = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-var SPECIALCHARACTERS_CHAR_CODES = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
+var SPECIALCHARACTERS_CHAR_CODES = ["!", "#", "$", "%", "&", "'", "(", ")", "*","+", ",", "-", ".", "/", " <", "=", ">", "?", "@", "[","]", "^", "_", "`", "{", "|", "}",];
 
-
-var toUpper = function(x) {
-   return x.toUpperCase();
-}
 
 function arrayFromLowToHigh (low,high) {
   const array = []
@@ -25,17 +21,13 @@ function arrayFromLowToHigh (low,high) {
   return array
 }
 
-
-
 function generatePassword (){
-enter = parseInt(prompt("How long would you like your code? "));
+enter = prompt("How long would you like your code? ");
 if (!enter) {
   alert("This needs a value");
 } else if (enter < 8 || enter > 128){
-  enter = parseInt(prompt("Pick between 8 and 128"));
-
-} else {
-
+  enter = prompt("Pick between 8 and 128");
+} else  {
   confirmLowercase = confirm("Do you want lowercase?");
   confirmNumber = confirm("Do you want numbers?");
   confirmUppercase = confirm(" Do you want Uppercase?");
@@ -80,7 +72,7 @@ else if (confirmLowercase && confirmNumber) {
 }
 
 else if (confirmCharacter) {
-  choices = chaSPECIALCHARACTERS_CHAR_CODESracter;
+  choices = SPECIALCHARACTERS_CHAR_CODES;
 }
 else if (confirmNumber) {
   choices = NUMBER_CHAR_CODES;
@@ -119,11 +111,7 @@ function writePassword() {
 return password
 }
 
-function copyPassword() {
-  document.getElementById("password").select();
-  document.execCommand("Copy");
-  alert("Password copied to clipboard!");
-}
+
 
 
 generateBtn.addEventListener("click", function () {
