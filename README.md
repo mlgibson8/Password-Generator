@@ -14,3 +14,8 @@ i did this by making the arrays into variables then using if functions to set wh
 
 I made a for loop to generate the number of character and which arrays to pull from. this is  bascially a randomizer.  kinda neat
 
+![screenshot] (https://github.com/mlgibson8/Password-Generator/blob/main/passwordgenerator.png)
+
+
+![repository] (https://github.com/mlgibson8/Password-Generator)
+![live!] (https://mlgibson8.github.io/Password-Generator/)
